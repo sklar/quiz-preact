@@ -1,11 +1,6 @@
 import party from 'party-js'
-import {
-	type ComponentType,
-	useCallback,
-	useEffect,
-	useRef,
-	useState,
-} from 'preact/compat'
+import type { JSX } from 'preact'
+import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 import { QuizProgress } from './quiz-progress'
 import { QuizQuestion } from './quiz-question'
@@ -29,7 +24,7 @@ const celebrationGifs = [
 	'https://media.giphy.com/media/ujUdrdpX7Ok5W/giphy.gif',
 ]
 
-export const Quiz: ComponentType = () => {
+export function Quiz(): JSX.Element {
 	const confettiRef = useRef<HTMLDivElement>(null)
 	const [celebrationGif, setCelebrationGif] = useState('')
 

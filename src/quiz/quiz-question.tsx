@@ -1,4 +1,4 @@
-import type { ComponentType, JSX } from 'preact'
+import type { JSX } from 'preact'
 import { useRef, useState } from 'preact/hooks'
 import { type Question, calculateAnswer } from './quiz.controller'
 
@@ -9,14 +9,14 @@ interface QuizQuestionProps {
 	onAnswer: (isCorrect: boolean) => void
 }
 
-export const QuizQuestion: ComponentType<QuizQuestionProps> = ({
+export function QuizQuestion({
 	question,
 	onAnswer,
-}) => {
+}: QuizQuestionProps): JSX.Element {
 	const [userAnswer, setUserAnswer] = useState('')
 	const inputRef = useRef<HTMLInputElement>(null)
 
-	const handleSubmit = (event: JSX.TargetedEvent<HTMLFormElement>) => {
+	const handleSubmit = (event: Event) => {
 		event.preventDefault()
 
 		if (userAnswer === '') return
@@ -41,7 +41,7 @@ export const QuizQuestion: ComponentType<QuizQuestionProps> = ({
 					value={userAnswer}
 					autoFocus
 					ref={inputRef}
-					onChange={(e) => setUserAnswer((e.target as HTMLInputElement).value)}
+					onInput={(e) => setUserAnswer((e.target as HTMLInputElement).value)}
 				/>
 			</p>
 		</form>

@@ -1,4 +1,4 @@
-import type { ComponentType } from 'preact'
+import type { JSX } from 'preact'
 
 import classes from './quiz.module.css'
 
@@ -7,10 +7,7 @@ interface QuizResultProps {
 	onReload: () => void
 }
 
-export const QuizResult: ComponentType<QuizResultProps> = ({
-	time,
-	onReload,
-}) => {
+export function QuizResult({ time, onReload }: QuizResultProps): JSX.Element {
 	return (
 		<p class={classes.result}>
 			<time
