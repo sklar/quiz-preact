@@ -57,6 +57,6 @@ button {
 	}
 }
 
-[id="root"] {
+[id="app"] {
 	display: contents;
 }

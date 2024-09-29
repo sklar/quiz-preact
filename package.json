@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"open-props": "^1.7.6",
+		"party-js": "^2.2.0",
 		"preact": "^10.23.1"
 	},
 	"devDependencies": {

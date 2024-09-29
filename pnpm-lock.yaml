@@ -11,6 +11,9 @@ importers:
       open-props:
         specifier: ^1.7.6
         version: 1.7.6
+      party-js:
+        specifier: ^2.2.0
+        version: 2.2.0
       preact:
         specifier: ^10.23.1
         version: 10.24.1
@@ -674,6 +677,9 @@ packages:
   open-props@1.7.6:
     resolution: {integrity: sha512-fE3E22x8lCf6gJrPO3L54NKrPaqQGxeKoXLz4JIXrhALD3Ua1kkE2kMw8HmlTKYF9BSLLMfoVfsT3UC1PJcaww==}
 
+  party-js@2.2.0:
+    resolution: {integrity: sha512-50hGuALCpvDTrQLPQ1fgUgxKIWAH28ShVkmeK/3zhO0YJyCqkhrZhQEkWPxDYLvbFJ7YAXyROmFEu35gKpZLtQ==}
+
   picocolors@1.1.0:
     resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
 
@@ -1317,6 +1323,8 @@ snapshots:
       boolbase: 1.0.0
 
   open-props@1.7.6: {}
+
+  party-js@2.2.0: {}
 
   picocolors@1.1.0: {}
 
